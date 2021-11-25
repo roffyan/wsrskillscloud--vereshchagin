@@ -1,6 +1,16 @@
-[InternetShortcut]
-URL=https://github.com/Jeniston14/wsr-skillcloud/blob/main/docker-compose.yml
-docker-compose up
-docker-compose up -d
-docker-compose stop
-docker-compose down
+version: "3.6"
+
+services:
+        site:
+                image: site
+                container_name: site
+                restart: always
+                ports:
+                        - 8080:80
+
+        balance:
+                image: balance
+                container_name: balance
+                restart: always
+                ports:
+                        - 80:80

@@ -1,2 +1,3 @@
-[InternetShortcut]
-URL=https://github.com/Jeniston14/wsr-skillcloud/blob/main/Dockerfile-site
+FROM nginx
+
+COPY index.html /usr/share/nginx/html
